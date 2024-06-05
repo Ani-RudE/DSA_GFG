@@ -8,7 +8,7 @@ bool compare(pair<int, int> a, pair<int, int> b)
      return ((a.second/a.first)>(b.second/b.first)); // Comparing the per unit value of an item
 }
 
-int getOptimal(pair<int, int> arr[], int n, int knapsackCapacity)
+int fractionalKnapsack(pair<int, int> arr[], int n, int knapsackCapacity)
 {
      sort(arr, arr+n, compare);
      int res=0, weight=0;
@@ -37,7 +37,7 @@ int main()
      pair<int, int> arr[]={{50,600}, {20,500}, {30,400}};
      int knapsackCapacity=70;
 
-     int res=getOptimal(arr,n,knapsackCapacity);
+     int res=fractionalKnapsack(arr,n,knapsackCapacity);
      cout<<res;
 
      return 0;
