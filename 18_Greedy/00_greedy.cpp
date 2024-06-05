@@ -20,6 +20,7 @@ int main()
      int n=sizeof(arr)/sizeof(arr[0]);
 
      int res=getOptimal(arr,n);
+     cout<<res;
 
      return 0;
 }
