@@ -128,5 +128,6 @@
     "shared_mutex": "cpp",
     "thread": "cpp",
     "typeindex": "cpp"
-  }
+  },
+  "workbench.editor.alwaysShowEditorActions": false
 }
