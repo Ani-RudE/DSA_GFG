@@ -129,5 +129,7 @@
     "thread": "cpp",
     "typeindex": "cpp"
   },
-  "workbench.editor.alwaysShowEditorActions": false
+  "workbench.editor.alwaysShowEditorActions": false,
+  "gitHistory.showEditorTitleMenuBarIcons": false,
+  "gitHistory.showFileHistorySplit": false
 }
