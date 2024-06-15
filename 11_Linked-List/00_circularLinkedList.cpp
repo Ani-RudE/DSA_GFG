@@ -14,20 +14,23 @@ struct Node
      }
 };
 
-Node printList(Node *head)
+void printCircularLL(Node *head)
 {
      if (head == NULL)
-          cout << "NULL" << endl;
+          cout << "NULL";
+     if (head->next == head)
+          cout << head->data;
 
-     Node *current = head;
-     while (current != NULL)
+     cout << head->data << " ";
+     Node *current = head->next;
+     while (current != head)
      {
           cout << current->data << " ";
           current = current->next;
      }
 
      cout << endl;
-     
+
      return;
 }
 
@@ -37,11 +40,9 @@ int main()
      Node *temp1 = new Node(20);
      Node *temp2 = new Node(30);
      head->next = temp1;
-     temp1->prev = head;
      temp1->next = temp2;
-     temp2->prev = temp1;
-     printList(head);
-     cout << endl;
+     temp2->next = head;
+     printCircularLL(head);
 
      return 0;
 }

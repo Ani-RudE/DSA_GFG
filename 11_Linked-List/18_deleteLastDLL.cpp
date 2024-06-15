@@ -14,6 +14,26 @@ struct Node
      }
 };
 
+Node* removeLastDLL(Node* head)
+{
+     if (head==NULL)
+          return NULL;
+     if (head->next==NULL)
+     {
+          delete head;
+          return NULL;
+     }
+     
+     Node* curr=head;
+     while (curr->next!=NULL)
+          curr=curr->next;
+     
+     curr->prev->next=NULL;
+     delete curr;
+
+     return head;
+}
+
 Node printList(Node *head)
 {
      if (head == NULL)
@@ -25,10 +45,6 @@ Node printList(Node *head)
           cout << current->data << " ";
           current = current->next;
      }
-
-     cout << endl;
-     
-     return;
 }
 
 int main()
@@ -41,7 +57,10 @@ int main()
      temp1->next = temp2;
      temp2->prev = temp1;
      printList(head);
-     cout << endl;
+     cout<<endl;
+
+     head=removeLastDLL(head);
+     printList(head);
 
      return 0;
 }
