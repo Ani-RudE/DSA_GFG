@@ -20,3 +20,6 @@ void compare(pair<int, int> a, pair<int, int> b)
      return (a.second<b.second);
 }
 ```
+
+In C++, a custom comparator function for sorting can be defined as a function that returns a bool.
+The function should return true if the first element should come before the second element, and false otherwise.
