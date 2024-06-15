@@ -34,7 +34,7 @@ Node *insertAtEnd(Node *head, int data)
      }
 }
 
-Node printList(Node *head)
+void printList(Node *head)
 {
      if (head == NULL)
           cout << "NULL" << endl;
@@ -45,6 +45,10 @@ Node printList(Node *head)
           cout << current->data << " ";
           current = current->next;
      }
+
+     cout << endl;
+
+     return;
 }
 
 int main()
