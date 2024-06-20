@@ -13,6 +13,14 @@ struct TreeNode {
      }
 };
 
+int maxInBT(TreeNode* root)
+{
+     if (root==NULL)
+          return INT32_MIN;
+          
+     return (max(root->data, (max(maxInBT(root->left), maxInBT(root->right)))));
+}
+
 int main()
 {
      TreeNode *root=new TreeNode(10);
@@ -20,6 +28,8 @@ int main()
      root->right=new TreeNode(30);
      root->left->left=new TreeNode(40);
      root->left->right=new TreeNode(50);
+
+     cout<<maxInBT(root);
 
      return 0;
 }
