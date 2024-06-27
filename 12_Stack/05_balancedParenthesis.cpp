@@ -8,19 +8,29 @@ bool isBalanced(string str)
      for (char x : str){
           if (x=='(' || x=='[' || x=='{') //Specifically use `' '`, not `" "` . It's giving an Error Messgae upon using `" "`: operand types are incompatible ("char" and "const char *").
                s.push(x);
-          else {
-               
+          else if (s.empty()==false) {
+               if (s.top()=='[' && x==']')
+                    s.pop();
+               else if (s.top()=='(' && x==')')
+                    s.pop();
+               else if (s.top()=='{' && x=='}')
+                    s.pop();
+               else
+                    return false;
           }
      }
 
-     return true;
+     if (s.empty()==true)
+          return true;
+     
+     return false;
 }
 
 int main()
 {
-     string str = "[][]{()}{}";
+     string str = "[][]{()}{}}";
 
-     cout << balancedParenthesis(str);
+     cout << isBalanced(str);
 
      return 0;
 }
