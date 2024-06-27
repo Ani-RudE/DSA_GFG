@@ -21,7 +21,6 @@ int heightBT(Node* root)
           return (max(heightBT(root->left), heightBT(root->right))+1);
 }
 
-
 int main()
 {
      Node *root=new Node(10);
