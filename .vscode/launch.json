@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/GitHub_Repositories/DSA/DSA_GFG",
-      "program": "d:/GitHub_Repositories/DSA/DSA_GFG/build/Debug/outDebug",
+      "cwd": "d:/GitHub_Repositories/DSA/DSA_GFG/20_Dynamic",
+      "program": "d:/GitHub_Repositories/DSA/DSA_GFG/20_Dynamic/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
