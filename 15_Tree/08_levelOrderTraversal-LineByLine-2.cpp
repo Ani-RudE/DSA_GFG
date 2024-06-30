@@ -48,6 +48,8 @@ int main()
      root->right=new TreeNode(30);
      root->left->left=new TreeNode(40);
      root->left->right=new TreeNode(50);
+     root->right->left=new TreeNode(55);
+     root->right->right=new TreeNode(60);
 
      levelOrderLineByLine2(root);
 
