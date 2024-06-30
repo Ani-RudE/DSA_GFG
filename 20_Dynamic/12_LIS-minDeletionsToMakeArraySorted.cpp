@@ -1,3 +1,4 @@
+//Minimum deletions to make an array sorted
 #include <iostream>
 #include <string.h>
 #include <vector>
@@ -22,30 +23,34 @@ int ceilIndex(vector<int> &tail, int l, int r, int key)
      return r;
 }
 
-int lengthOfLIS(vector<int> &nums)
+int lengthOfLIS(vector<int> &arr)
 {
      vector<int> tail;
-     tail.push_back(nums[0]);
-     for (int i = 1; i < nums.size(); ++i)
+     tail.push_back(arr[0]);
+     for (int i = 1; i < arr.size(); ++i)
      {
-          if (tail[tail.size() - 1] < nums[i])
+          if (tail[tail.size() - 1] < arr[i])
           {
-               tail.push_back(nums[i]);
+               tail.push_back(arr[i]);
           }
           else
           {
-               int idx = ceilIndex(tail, 0, tail.size() - 1, nums[i]);
-               tail[idx] = nums[i];
+               int idx = ceilIndex(tail, 0, tail.size() - 1, arr[i]);
+               tail[idx] = arr[i];
           }
      }
 
      return tail.size();
 }
 
+int minDeletions(vector<int> &arr) {
+     return (arr.size() - lengthOfLIS(arr));
+}
+
 int main()
 {
-     vector<int> arr = {3, 4, 2, 8, 10, 5, 1};
-     cout << lengthOfLIS(arr);
+     vector<int> arr = {5,10,3,6,7,8};
+     cout << minDeletions(arr);
 
      return 0;
 }
