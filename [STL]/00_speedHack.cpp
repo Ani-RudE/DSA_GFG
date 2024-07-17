@@ -18,3 +18,12 @@ auto speedHack = []()
 #pragma GCC optimize("O3")
 
 #pragma pack(1) // For struct to remove struct size padding
+
+/* ****************************** */
+
+static const int __ = [](){
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    //cout.tie(nullptr);
+    return 0;
+}();
